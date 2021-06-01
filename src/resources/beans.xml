@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<bean name="aRef" class="com.cts.mvnecljv.A"></bean>
+		
+<!-- <bean name="bRef" class="com.cts.mvnecljv.B" scope="prototype">
+    <property name="a" ref="aRef"></property></bean>-->
+   
+    <bean name="bRef" class="com.cts.mvnecljv.B">
+    <constructor-arg name="a" ref="aRef"></constructor-arg></bean>
+		
+</beans>

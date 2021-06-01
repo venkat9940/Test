@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context = "http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd" >
+
+<bean name="a" class="com.cts.auto.Point">
+<property name="x" value="125"></property>
+<property name="y" value="125"></property></bean>
+
+<bean name="b" class="com.cts.auto.Point">
+<property name="x" value="175"></property>
+<property name="y" value="175"></property></bean>
+<bean name="line" class="com.cts.auto.Line" autowire="constructor"></bean>
+<!-- Constructer uses the typr name in config and invokes matching constructor with same names as constructor parameters -->
+		<!--  byType expects that the config file has only one bean of a type and uses setter injection to push
+		the dependency-->
+		<!-- byName
+		uses matching name of beans in config and uses setter injection for pushing dependencies -->
+		<!-- default or no means by default no auto wiring is performed by the IOC container -->
+</beans>

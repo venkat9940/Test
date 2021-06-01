@@ -1,0 +1,7 @@
+Spring has moved away from xml --> annotations
+both can be present in an application
+annotations have priority over declarative xml configuration
+-------------------------------------
+Spring Stereotype annotations
+
+@Component are targets for auto wiring @Autowired 
